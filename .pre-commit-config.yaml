@@ -41,7 +41,7 @@ repos:
       - id: clang-format
         args: ["--style=file", "-i"]
         stages: [pre-commit]
-        files: (csrc|include)/.*\.(cpp|cc|cxx|h|hpp)$
+        files: (lib)/.*\.(cpp|cc|cxx|h|hpp)$
 
       - id: clang-tidy
         name: clang-tidy
@@ -51,7 +51,7 @@ repos:
             "--warnings-as-errors=*",
             "-extra-arg=-I/usr/lib/gcc/x86_64-linux-gnu/11/include",
           ]
-        files: (csrc|include)/.*\.(cpp|hpp)$
+        files: (lib)/.*\.(cpp|hpp)$
 
 default_language_version:
   python: python3.10
