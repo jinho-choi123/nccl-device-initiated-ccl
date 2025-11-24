@@ -50,10 +50,9 @@ else()
     message(FATAL_ERROR "MPI not found!")
 endif()
 
-
+# Add common/ subdirectory
+add_subdirectory(common/)
 
 # Add lib/ subdirectory
 add_subdirectory(lib/)
 
-# Add common/ subdirectory
-add_subdirectory(common/)

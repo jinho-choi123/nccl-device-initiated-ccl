@@ -1,6 +1,5 @@
 
 #include "kernels.cuh"
-#include "utils.cuh"
 #include "utils.h"
 #include <nccl.h>
 #include <stdio.h>

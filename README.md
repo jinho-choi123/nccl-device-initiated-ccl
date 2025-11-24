@@ -28,10 +28,10 @@ uv run --no-sync cmake --build build
 
 #### Example: Conventional All-Reduce
 ```bash
-uv run --no-sync mpirun -n 2 ./build/lib/run_all_reduce
+NCCL_P2P_DISABLE=1 uv run --no-sync mpirun -n 2 ./build/lib/run_all_reduce
 
 # For Debug
-NCCL_DEBUG=INFO uv run --no-sync mpirun -n 2 ./build/lib/run_all_reduce
+NCCL_DEBUG=INFO NCCL_P2P_DISABLE=1 uv run --no-sync  mpirun -n 2 ./lib/run_all_reduce
 ```
 
 #### Example: LSA All-Reduce
