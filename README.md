@@ -26,8 +26,16 @@ uv run --no-sync cmake --build build
 ./build/run_add_one
 ```
 
+#### Example: Conventional All-Reduce
+```bash
+uv run --no-sync mpirun -n 2 ./build/lib/run_all_reduce
+
+# For Debug
+NCCL_DEBUG=INFO uv run --no-sync mpirun -n 2 ./build/lib/run_all_reduce
+```
+
 #### Example: LSA All-Reduce
 ```bash
 # Run LSA All-Reduce example
-uv run --no-sync mpirun -n 2 ./build/run_lsa_all_reduce
+uv run --no-sync mpirun -n 2 ./build/lib/run_lsa_all_reduce
 ```
