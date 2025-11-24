@@ -14,3 +14,20 @@ uv sync
 # Install pre-commit
 pre-commit install
 ```
+4. Build the binaries
+```bash
+uv run --no-sync cmake -B build -S . -G Ninja
+uv run --no-sync cmake --build build
+```
+
+#### Example: Add One
+```bash
+# Run add one example
+./build/run_add_one
+```
+
+#### Example: LSA All-Reduce
+```bash
+# Run LSA All-Reduce example
+uv run --no-sync mpirun -n 2 ./build/run_lsa_all_reduce
+```
